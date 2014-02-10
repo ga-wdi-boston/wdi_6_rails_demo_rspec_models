@@ -17,6 +17,10 @@ describe Contact do
     expect(Contact.create(first_name: "David", last_name: "Fisher", phone: "555-1212")).to_not be_valid
   end
 
+  describe "associations" do
+    it { should have_many :notes }
+  end
+
   # All tests for class method of 'born_on'
   describe ".born_on" do
     before :each do
