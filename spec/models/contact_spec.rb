@@ -33,4 +33,11 @@ describe Contact do
     end
   end
 
+  describe "#full_name" do
+    it "should return the full name of a contact" do
+      @david = Contact.create(first_name: "David", last_name: "Fisher", phone: "555-1212", birthday: "2014-02-03")
+      expect(@david.full_name).to eq("David Fisher")
+    end
+  end
+
 end

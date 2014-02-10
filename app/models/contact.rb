@@ -12,4 +12,8 @@ class Contact < ActiveRecord::Base
     # SELECT * FROM CONTACTS WHERE EXTRACT(DOW FROM birthday) = dow
     where('EXTRACT(DOW FROM birthday) = ?', dow)
   end
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end
